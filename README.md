@@ -1,5 +1,14 @@
 # Fast-Planner
 
+## 如何在Ubuntu20.04上和noteic版本的ROS上运行这个项目
+只需要克隆该仓库，然后按照下面的quick那一部分来安装nlopt包，采用本地编译nlopt的方式来安装，不要用apt命令直接安装。其次在编译这个fast planner的时候，采用这个命令来编译
+```
+catkin_make -DCMAKE_CXX_STANDARD=14
+```
+这样子就编译成功了，然后就和其他地方一样了
+至于是修改了哪些地方呢？
+一个就是源代码中有三个地方的函数返回值有问题，进行修改了，然后就是修改了编译时用到的makelist文件，因为nlopt库的链接和其他版本的不一样
+
 **Fast-Planner** is developed aiming to enable quadrotor fast flight in complex unknown environments. It contains a rich set of carefully designed planning algorithms. 
 
 **News**: 
